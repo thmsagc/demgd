@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Welcome to Deterministic Extended Markovian Geometric Diffusion Method’s documentation! &mdash; Deterministic Extended Markovian Geometric Diffusion Method 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Deterministic Extended Markovian Geometric Diffusion Method
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to Deterministic Extended Markovian Geometric Diffusion Method’s documentation!</a></li>
+<li><a class="reference internal" href="#index-link">Index Link</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Deterministic Extended Markovian Geometric Diffusion Method</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to Deterministic Extended Markovian Geometric Diffusion Method’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/classes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-SparseGraph">
+<span id="welcome-to-deterministic-extended-markovian-geometric-diffusion-method-s-documentation"></span><h1>Welcome to Deterministic Extended Markovian Geometric Diffusion Method’s documentation!<a class="headerlink" href="#module-SparseGraph" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="SparseGraph.SparseGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">SparseGraph.</span></code><code class="sig-name descname"><span class="pre">SparseGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sparse Graph Methods</p>
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__binarySearch__">
+<code class="sig-name descname"><span class="pre">__binarySearch__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__binarySearch__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary search for inserting and removing elements in a list.</p>
+<p>This function is used to search for the position for orderly insertion or removal of an element in a list. The function return is of the type 2-tuple, where the first position is a value of 1 or 0 that indicates whether or not the searched element is present in the list, respectively. The second position of the 2-tuple indicates the position of / for the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> – List to fetch it.</p></li>
+<li><p><strong>col</strong> – Element to be searched.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A 2-tuple that contains if the element existis or not and their
+position.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__findDiagonal__">
+<code class="sig-name descname"><span class="pre">__findDiagonal__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__findDiagonal__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the position of each element within its own adjacency list.</p>
+<p>This function is used to find the position of the adjacencies of each element for itself within its own adjacency lists. The position found is added in a vector called n positions diagonal, in the index corresponding to the position of each element in the input set. It is essential for quick access to the arc weight of each element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__indexCorrector__">
+<code class="sig-name descname"><span class="pre">__indexCorrector__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__indexCorrector__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Correction of the indexes of the adjacencies after a removal.</p>
+<p>This function is used to correct the values ​​of the first position of the 2-tuples that represent the edges within the adjacency lists of all vertices. Values ​​greater than the index of the vertex that was removed are decremented by 1, in order to correct the resulting inconsistency after removal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Reference index to the correction.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__insertEdge__">
+<code class="sig-name descname"><span class="pre">__insertEdge__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__insertEdge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insertion of an edge between a pair of vertices.</p>
+<p>This function is used for inserting an edge between a pair of graph vertices. Uses the __binarySearch__ function to find the correct position for an ordered insertion. The insertion is undirected. Therefore, two edges are created at each insertion. The first is from row to col and the second is your mirror.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> – First vertex of the pair.</p></li>
+<li><p><strong>col</strong> – Second vertex of the pair.</p></li>
+<li><p><strong>weight</strong> – Weight of the edge between the pair of vertices.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__removeEdge__">
+<code class="sig-name descname"><span class="pre">__removeEdge__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__removeEdge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removing an edge between a pair of vertices.</p>
+<p>This function is used to remove the edge between a pair of vertices of the graph. It uses the function __binarySearch__ to check if there is an edge or not and find the position of the edge to be removed within the list of adjacencies of both vertices, considering that the removal is also non-directed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> – Vertex of origin of the edge.</p></li>
+<li><p><strong>col</strong> – Target apex of the edge.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True or false if the edges was or wasn’t removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__removeVertex__">
+<code class="sig-name descname"><span class="pre">__removeVertex__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__removeVertex__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removing a vertex from the input set.</p>
+<p>This function is used to remove a vertex from the input set. Vertices are represented only by their adjacency lists. The first step of vertex removal is the removal of all edges that connect with it and also all mirror edges. After that, the list of element adjacencies is removed. After the removal, it is necessary to make a correction of the indices higher than the vertex removed within the lists of adjacencies of all elements. This task is done with the function __indexCorrector__.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Index of the vertex to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="SparseGraph.SparseGraph.__weakref__">
+<code class="sig-name descname"><span class="pre">__weakref__</span></code><a class="headerlink" href="#SparseGraph.SparseGraph.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-DeterministicEMGD"></span><dl class="py class">
+<dt id="DeterministicEMGD.Deterministic_EMGD">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">DeterministicEMGD.</span></code><code class="sig-name descname"><span class="pre">Deterministic_EMGD</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputSet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distanceMetric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deterministic EMGD Methods</p>
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__EMGD__">
+<code class="sig-name descname"><span class="pre">__EMGD__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multiplier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__EMGD__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iteration of the Extended Markovian Geometric Diffusion (EMGD) method.</p>
+<p>This function is responsible for performing an interaction of the EMGDM method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>multiplier</strong> – Multiplier for standard deviation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True or False if the method must be continue or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__applyKernelAndNormalize__">
+<code class="sig-name descname"><span class="pre">__applyKernelAndNormalize__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__applyKernelAndNormalize__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application of core function and normalization on edge weights.</p>
+<p>This function is responsible for geometrizing the graph and transforming the set of edges into a Markov chain. First, the core function is applied to each edge weight, represented by the second position of the 2-tuples in the adjacency lists. The new values ​​are added to the divisor variable, which will be the normalization factor. Then, all values ​​are scanned again to divide each one by the normalization factor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__bucketsVerify__">
+<code class="sig-name descname"><span class="pre">__bucketsVerify__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxPerBucket</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__bucketsVerify__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if any bucket has exceeded its maximum capacity.</p>
+<p>This function is responsible for checking if any bucket has exceeded the maximum capacity of elements. If any bucket has exceeded its maximum capacity, this function returns the Boolean value False. If all buckets are at maximum capacity, this function returns the Boolean value True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>numBuckets</strong> – Number of buckets for allocating elements.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True or False if the verification was successful or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__buildBuckets__">
+<code class="sig-name descname"><span class="pre">__buildBuckets__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__buildBuckets__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction of buckets.</p>
+<p>This function is responsible for allocating the elements in their respective buckets. Use the __pertinenceDegree__ function to calculate the bucket index that each element should be allocated to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__computeAverage__">
+<code class="sig-name descname"><span class="pre">__computeAverage__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__computeAverage__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computation of the average of the importance values ​​of the elements.</p>
+<p>This function is responsible for computing the average of the elements’ importance. First, the main diagonal of the adjacency matrix is ​​added by multiplying each value of the diagonal by the number of vertices in the star of each element. Then, the result of this sum is divided by the number of vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of the average of the importances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__computeMinMax__">
+<code class="sig-name descname"><span class="pre">__computeMinMax__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__computeMinMax__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computation to find the minimum and maximum points of the set and entry.</p>
+<p>This function is responsible for finding the minimum and maximum points of the input set. These values ​​make up the square convex closure of the input set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__computeStandardDeviation__">
+<code class="sig-name descname"><span class="pre">__computeStandardDeviation__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__computeStandardDeviation__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computation of the standard deviation of the importance values ​​of the elements.</p>
+<p>This function is responsible for computing the standard deviation of the importance values ​​of the elements. This value is the result of the square root of the variance of the importance values ​​of the elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of Standard Deviation of the importances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__computeStatistics__">
+<code class="sig-name descname"><span class="pre">__computeStatistics__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__computeStatistics__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computation to calculate the mean, variance and standard deviation of the values ​​of the importance of the elements.</p>
+<p>This function is an auxiliary function, which calls the functions responsible for calculating the mean, variance and standard deviation of the importance values ​​of the elements in this exact order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__computeVariancy__">
+<code class="sig-name descname"><span class="pre">__computeVariancy__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__computeVariancy__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computation of the standard deviation of the importance values ​​of the elements.</p>
+<p>This function is responsible for computing the variance of the importance values of the elements. First it is subtracted from the average of the importance values of the importance of each element. The result of this subtraction is added to a variable called total. Finally, the total value of the sum of the subtractions is divided by the number of vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of the Variancy of the importances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__connectNeighbors__">
+<code class="sig-name descname"><span class="pre">__connectNeighbors__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__connectNeighbors__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creation of edges between all vertex neighbors.</p>
+<p>This function is responsible for creating edges between all neighbors of a given vertex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Index of the vertex to which your neighbors should be connected.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__createBuckets__">
+<code class="sig-name descname"><span class="pre">__createBuckets__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxPerBucket</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__createBuckets__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execution of all steps for the creation of the buckets.</p>
+<p>This function is responsible for calling in the correct sequence the functions necessary for the correct creation of the buckets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>MaxPerBucket</strong> – Maximum number of elements per bucket.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__createGraphKNN__">
+<code class="sig-name descname"><span class="pre">__createGraphKNN__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__createGraphKNN__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creation of the graph for geometric representation of the input set.</p>
+<p>This function is responsible for creating the graph that represents the geometric structure built from the input set. First, the k-neighbors closest to each element are found in their own bucket and a number represented by the neighbor propagation parameter. Then, edges are created between each element and its closest k-neighbors. Finally, the __applyKernelAndNormalize__ and __computeStatistics__ functions are called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> – Number of k-closest neighbors that each vertex must connect to.</p></li>
+<li><p><strong>propagation</strong> – Number of neighboring buckets that must be traversed to compute the nearest k-neighbors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__deleteInstance__">
+<code class="sig-name descname"><span class="pre">__deleteInstance__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__deleteInstance__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removal of an instance from the input set.</p>
+<p>This function is responsible for deleting the index data element from the input set. First the __connectNeighbors__ function is called, then the element is removed from all vectors of the method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Index of the instance to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__distance__">
+<code class="sig-name descname"><span class="pre">__distance__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__distance__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing the distance between two elements.</p>
+<p>This function is an auxiliary function for computing the spatial distance between two elements using the distance metric specified by the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p1</strong> – First element</p></li>
+<li><p><strong>p2</strong> – Second element</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The distance between p1 and p2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__euclideanDistance__">
+<code class="sig-name descname"><span class="pre">__euclideanDistance__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__euclideanDistance__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing the Euclidean distance between two elements.</p>
+<p>This function is responsible for computing the Euclidean distance between two elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p1</strong> – First element</p></li>
+<li><p><strong>p2</strong> – Second element</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The euclidean distance between p1 and p2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__gaussianKernel__">
+<code class="sig-name descname"><span class="pre">__gaussianKernel__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__gaussianKernel__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application of the reduced Gaussian core function over a given value.</p>
+<p>This function is responsible for returning the result of applying the Gaussian core function over a given value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – Value to be computed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The gaussian kernel value of a input.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__getRemoved__">
+<code class="sig-name descname"><span class="pre">__getRemoved__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__getRemoved__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieving the list of instances that have been removed.</p>
+<p>This function is responsible for returning the list of instances that have been removed from the input set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The set of the elements that was removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputSet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distanceMetric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__iterator__">
+<code class="sig-name descname"><span class="pre">__iterator__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percentage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__iterator__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performing iterations of the _EMGD_ function.</p>
+<p>This function is responsible for performing iterations of the EMGD method until the number of elements in the input set is equal to or less than that specified by the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>percentage</strong> – Percentage of the number of elements to be maintained from the input set.</p></li>
+<li><p><strong>multiplier</strong> – Multiplier for standard deviation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__manhattanDistance__">
+<code class="sig-name descname"><span class="pre">__manhattanDistance__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__manhattanDistance__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing the Manhattan distance between two elements.</p>
+<p>This function is responsible for computing the Manhattan distance between two elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p1</strong> – First element.</p></li>
+<li><p><strong>p2</strong> – Second element.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The manhattan distance between p1 and p2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__mergeBuckets__">
+<code class="sig-name descname"><span class="pre">__mergeBuckets__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxPerBucket</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__mergeBuckets__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Union of buckets that contain few or no elements.</p>
+<p>This function is responsible for joining buckets with a low number of elements. For each bucket, it is checked that the connection with the following buckets does not exceed the maximum capacity of elements per bucket and joins the buckets until the connection with the next bucket does not exceed the maximum capacity of elements per bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>maxPerBucket</strong> – Maximum number of elements per bucket.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__pertinenceDegree__">
+<code class="sig-name descname"><span class="pre">__pertinenceDegree__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__pertinenceDegree__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application of the pertinence equation on a given vertex.</p>
+<p>This function is responsible for computing the Degree of Pertinence of a given element. First, the distances of the element to the minimum and maximum are computed. Then, the Degree of Relevance is computed and returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xk</strong> – Element to have the degree of pertinence computed.</p></li>
+<li><p><strong>c1</strong> – Minimum input set.</p></li>
+<li><p><strong>c2</strong> – Maximum input set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The pertincence degree of a xk inputed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__plotGraph__">
+<code class="sig-name descname"><span class="pre">__plotGraph__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjacencies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numVertex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__plotGraph__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function plots the graph of the input set.</p>
+<p>This checks whether the input set graph has been created. If so, the graph is plotted. The function has three Boolean parameters to choose what will or will not be displayed in the plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vertex</strong> – Plot the graph’s vertices.</p></li>
+<li><p><strong>adjacencies</strong> – Plot the graph’s adjacencies.</p></li>
+<li><p><strong>numVertex</strong> – Plot the graph’s vertex ids.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="DeterministicEMGD.Deterministic_EMGD.__weakref__">
+<code class="sig-name descname"><span class="pre">__weakref__</span></code><a class="headerlink" href="#DeterministicEMGD.Deterministic_EMGD.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="index-link">
+<h1>Index Link<a class="headerlink" href="#index-link" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Leandro Carlos de Souza &amp; Thomás Augusto Gouveia Chaves.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

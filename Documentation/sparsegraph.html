@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Class: SparseGraph &mdash; Deterministic Extended Markovian Geometric Diffusion Method 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Deterministic Extended Markovian Geometric Diffusion Method’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Deterministic Extended Markovian Geometric Diffusion Method
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Class: SparseGraph</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Deterministic Extended Markovian Geometric Diffusion Method</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Class: SparseGraph</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sparsegraph.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-SparseGraph">
+<span id="class-sparsegraph"></span><h1>Class: SparseGraph<a class="headerlink" href="#module-SparseGraph" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="SparseGraph.SparseGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">SparseGraph.</span></code><code class="sig-name descname"><span class="pre">SparseGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sparse Graph Methods</p>
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__binarySearch__">
+<code class="sig-name descname"><span class="pre">__binarySearch__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__binarySearch__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary search for inserting and removing elements in a list.</p>
+<p>This function is used to search for the position for orderly insertion or removal of an element in a list. The function return is of the type 2-tuple, where the first position is a value of 1 or 0 that indicates whether or not the searched element is present in the list, respectively. The second position of the 2-tuple indicates the position of / for the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> – List to fetch it.</p></li>
+<li><p><strong>col</strong> – Element to be searched.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A 2-tuple that contains if the element existis or not and their
+position.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__findDiagonal__">
+<code class="sig-name descname"><span class="pre">__findDiagonal__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__findDiagonal__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the position of each element within its own adjacency list.</p>
+<p>This function is used to find the position of the adjacencies of each element for itself within its own adjacency lists. The position found is added in a vector called n positions diagonal, in the index corresponding to the position of each element in the input set. It is essential for quick access to the arc weight of each element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__indexCorrector__">
+<code class="sig-name descname"><span class="pre">__indexCorrector__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__indexCorrector__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Correction of the indexes of the adjacencies after a removal.</p>
+<p>This function is used to correct the values ​​of the first position of the 2-tuples that represent the edges within the adjacency lists of all vertices. Values ​​greater than the index of the vertex that was removed are decremented by 1, in order to correct the resulting inconsistency after removal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Reference index to the correction.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputSet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__insertEdge__">
+<code class="sig-name descname"><span class="pre">__insertEdge__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__insertEdge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insertion of an edge between a pair of vertices.</p>
+<p>This function is used for inserting an edge between a pair of graph vertices. Uses the __binarySearch__ function to find the correct position for an ordered insertion. The insertion is undirected. Therefore, two edges are created at each insertion. The first is from row to col and the second is your mirror.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> – First vertex of the pair.</p></li>
+<li><p><strong>col</strong> – Second vertex of the pair.</p></li>
+<li><p><strong>weight</strong> – Weight of the edge between the pair of vertices.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__removeEdge__">
+<code class="sig-name descname"><span class="pre">__removeEdge__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__removeEdge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removing an edge between a pair of vertices.</p>
+<p>This function is used to remove the edge between a pair of vertices of the graph. It uses the function __binarySearch__ to check if there is an edge or not and find the position of the edge to be removed within the list of adjacencies of both vertices, considering that the removal is also non-directed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> – Vertex of origin of the edge.</p></li>
+<li><p><strong>col</strong> – Target apex of the edge.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True or false if the edges was or wasn’t removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="SparseGraph.SparseGraph.__removeVertex__">
+<code class="sig-name descname"><span class="pre">__removeVertex__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SparseGraph.SparseGraph.__removeVertex__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removing a vertex from the input set.</p>
+<p>This function is used to remove a vertex from the input set. Vertices are represented only by their adjacency lists. The first step of vertex removal is the removal of all edges that connect with it and also all mirror edges. After that, the list of element adjacencies is removed. After the removal, it is necessary to make a correction of the indices higher than the vertex removed within the lists of adjacencies of all elements. This task is done with the function __indexCorrector__.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Index of the vertex to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="SparseGraph.SparseGraph.__weakref__">
+<code class="sig-name descname"><span class="pre">__weakref__</span></code><a class="headerlink" href="#SparseGraph.SparseGraph.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Deterministic Extended Markovian Geometric Diffusion Method’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Leandro Carlos de Souza &amp; Thomás Augusto Gouveia Chaves.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+.. Deterministic Extended Markovian Geometric Diffusion Method documentation master file, created by
+   sphinx-quickstart on Sat Apr  3 23:23:49 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Deterministic Extended Markovian Geometric Diffusion (DEMGD) Method
+=======================================================================================
+
+Documentation Page
+--------------------
+The Deterministic Extended Markovian Geometric Diffusion method is, as the name suggests, a deterministic version of the Extended Markovian Geometric Diffusion method. 
+In general, it is a method designed to reduce databases so that instances of lesser importance are removed.
+
+1. Classes and Methods
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. toctree::
+   demgd
+   sparsegraph
+   execution
+
+2. Requeriments
+~~~~~~~~~~~~~~~~~
+
+1. python3;
+2. pip3;
+
+3. Authors
+~~~~~~~~~~~~
+	**This section introduces the authors of the Deterministic Extended Markovian Geometric Diffusion method.**
+
+    Leandro Carlos de Souza
+********************************
+
+	.. image:: images/foto_leandro.png
+	   :height: 400
+	   :width: 350
+	   :scale: 50
+	   :alt: Leandro Carlos de Souza
+	   
+	**He holds a PhD in Computer Science from the Federal University of Pernambuco, Pernambuco, Brazil. He serves as a professor in the Computer Science course at the Universidade Federal da Paraíba, Paraíba, Brazil. He is the author and advisor of the research project that gave rise to the Deterministic Extended Markovian Geometric Diffusion method. He is the author of the method that led to the reduction of data from geometric diffusion. The original work is called Mesh Simplification with Preservation of Features Based on Geometric Diffusion.** 
+	   
+	   
+    Thomás Augusto Gouveia Chaves
+**************************************
+
+	.. image:: images/foto_thomas.jpg
+	   :height: 400
+	   :width: 400
+	   :scale: 50
+	   :alt: Thomás Augusto Gouveia Chaves
+	   
+	**He is majoring in Computer Science at the Universidade Federal da Paraíba, Paraíba, Brazil. He works as a research fellow under the guidance of mister Doctor Leandro Carlos de Souza. He is the developer of the Deterministic Extended Markovian Geometric Diffusion method.**
