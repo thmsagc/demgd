@@ -63,8 +63,10 @@ remoção dos pontos abaixo de `média − multiplier·desvio`, iterando), poré
 - redução por **recomputação barata** da difusão sobre o conjunto que encolhe a
   cada passada, eliminando a maquinaria O(N²) de deleção incremental
   (`__indexCorrector__`/`__findDiagonal__`);
-- a supressão não-máxima (manter, entre candidatos vizinhos, apenas o menos
-  importante) é preservada num laço restrito só aos candidatos.
+- a supressão não-máxima (não remover clusters densos de candidatos de uma vez)
+  é feita de forma **totalmente vetorizada**: remove-se, por passada, apenas os
+  candidatos que são **mínimos locais de importância** no subgrafo de
+  candidatos (desempate estrito por índice), sem laço Python.
 
 É um **substituto direto**: mesma assinatura pública e mesmo retorno
 `(reducedSet, removedSet)`. `maxPerBucket` e `propagation` são aceitos por
@@ -78,17 +80,17 @@ Velocidade (mesma máquina; `benchmark.py` reproduz):
 
 | N | original | fast | ganho |
 |---:|---:|---:|---:|
-| 1.000 | 0,067 s | 0,005 s | ~14× |
-| 4.000 | 0,297 s | 0,011 s | ~28× |
-| 16.000 | 1,631 s | 0,038 s | ~43× |
+| 1.000 | 0,066 s | 0,004 s | ~18× |
+| 4.000 | 0,302 s | 0,008 s | ~39× |
+| 16.000 | 1,639 s | 0,031 s | ~53× |
 
 **Caminho de redução ativa (`multiplier=-2`):**
 
 | N | original | fast | ganho |
 |---:|---:|---:|---:|
-| 500 | 0,082 s | 0,010 s | ~8× |
-| 2.000 | 1,075 s | 0,022 s | ~48× |
-| 4.000 | 4,702 s | 0,040 s | **~117×** |
+| 500 | 0,085 s | 0,012 s | ~7× |
+| 2.000 | 1,077 s | 0,018 s | ~60× |
+| 4.000 | 4,918 s | 0,030 s | **~162×** |
 
 O ganho **cresce com N** porque o original é O(N²) e a nova versão é ~O(N log N).
 
@@ -96,9 +98,21 @@ O ganho **cresce com N** porque o original é O(N²) e a nova versão é ~O(N lo
 
 | N | fast | mantidos | removidos |
 |---:|---:|---:|---:|
-| 50.000 | 0,49 s | 32.106 | 17.894 |
-| 100.000 | 0,95 s | 64.063 | 35.937 |
-| 200.000 | 2,31 s | 127.519 | 72.481 |
+| 50.000 | 0,23 s | 31.905 | 18.095 |
+| 100.000 | 0,40 s | 69.864 | 30.136 |
+| 200.000 | 0,85 s | 138.958 | 61.042 |
+
+### 3.1 Onde o tempo é gasto agora (o piso prático)
+
+Após vetorizar a supressão, em 200.000 pontos o tempo (~0,85 s) fica bem
+distribuído: consulta KNN exata no KD-tree (~0,26 s, o núcleo irredutível),
+montagem/simetrização das matrizes esparsas (~0,14 s), supressão vetorizada
+(~0,12 s) e conversão final para lista (~0,06 s). Não há mais um único gargalo
+dominante — estamos próximos do piso para uma implementação NumPy/SciPy.
+
+Ganhos adicionais só viriam mudando a **natureza** do cálculo (KNN aproximado
+por grade/`pykeops`, execução em GPU, ou compilação com Numba/Cython), com
+retorno decrescente e mais complexidade/dependências.
 
 **Qualidade da redução** (distância média/máxima de cada ponto original ao ponto
 mantido mais próximo — menor = melhor cobertura): a média fica em ~0,07–0,16 em

@@ -71,7 +71,10 @@ def _build_diffusion(X, k):
     # nearest neighbour, which plays the role of the self-loop.
     kk = min(k + 1, n)
 
-    tree = cKDTree(X)
+    # balanced_tree/compact_nodes=False give a much cheaper tree build; the
+    # KNN query is what we call once, so we trade a little query time for a
+    # big build-time saving on every reduction pass.
+    tree = cKDTree(X, balanced_tree=False, compact_nodes=False)
     dist, idx = tree.query(X, k=kk, workers=-1)
     # cKDTree.query drops the last axis when kk == 1; normalise the shape.
     if kk == 1:
@@ -98,34 +101,46 @@ def _build_diffusion(X, k):
 
 
 def _suppress_and_mark(importance, W, multiplier):
-    """Select the instances to remove in one EMGD pass.
+    """Select the instances to remove in one EMGD pass (fully vectorised).
 
-    Reproduces the original non-maximal-suppression: iterate candidates in
-    index order; when a candidate is processed, any already-marked neighbour is
-    unmarked and, among the candidate and those neighbours, the least important
-    one is (re)marked. Only candidate rows are touched, so this is cheap.
+    A point is a removal candidate when its importance falls below
+    ``average - multiplier * std``. To avoid tearing holes by removing whole
+    adjacent clumps at once (the intent of the original non-maximal
+    suppression), only candidates that are a **local minimum of importance**
+    within the candidate sub-graph are removed in a given pass; their
+    higher-importance candidate neighbours survive to the next pass.
+
+    Ties are broken by index through a strict total order, so the result is
+    deterministic and symmetric. Unlike the original per-node Python loop, this
+    is expressed entirely with array/sparse operations.
     """
     avg = importance.mean()
     std = importance.std()  # population std (ddof=0), matches the original
     threshold = avg - std * multiplier
 
-    candidates = np.where(importance < threshold)[0]
-    if candidates.size == 0:
-        return candidates  # empty -> caller stops
+    cand = importance < threshold
+    if not cand.any():
+        return np.empty(0, dtype=np.intp)
 
-    marked = np.zeros(importance.size, dtype=bool)
+    n = importance.size
+    # Strict total order key: smaller key == less important (more removable),
+    # ties resolved by node index. key[i] is the rank of node i.
+    order = np.lexsort((np.arange(n), importance))
+    key = np.empty(n, dtype=np.int64)
+    key[order] = np.arange(n)
+
     indptr, indices = W.indptr, W.indices
-    for i in candidates:
-        least = i
-        imp_i = importance[i]
-        for j in indices[indptr[i]:indptr[i + 1]]:
-            if marked[j]:
-                if importance[j] < imp_i:
-                    least = j
-                marked[j] = False
-        marked[least] = True
+    rows = np.repeat(np.arange(n), np.diff(indptr))
+    big = np.int64(n + 1)
+    # For each stored edge, the neighbour's key if that neighbour is also a
+    # candidate (self-loops excluded); otherwise +inf so it never wins the min.
+    edge_key = np.where(cand[indices] & (indices != rows), key[indices], big)
+    # Per-row minimum neighbour key. Every row has a self-loop, so no row is
+    # empty and reduceat is well defined.
+    neighbour_min = np.minimum.reduceat(edge_key, indptr[:-1])
 
-    return np.where(marked)[0]
+    remove = cand & (key < neighbour_min)
+    return np.where(remove)[0]
 
 
 def DeterministicEMGD(inputSet, percentage=0.75, maxPerBucket=25, k=5,
@@ -169,7 +184,6 @@ def DeterministicEMGD(inputSet, percentage=0.75, maxPerBucket=25, k=5,
         k = n0 - 1
         warnings.warn("Warning: k changed implicitly to " + str(k) + ".")
 
-    original_points = [tuple(row) for row in X]
     ids = np.arange(n0)                 # ids[j] = original index of current row j
     target = int(n0 * percentage)
     removed_ids = []
@@ -186,6 +200,6 @@ def DeterministicEMGD(inputSet, percentage=0.75, maxPerBucket=25, k=5,
         cur = cur[keep]
         ids = ids[keep]
 
-    reduced_set = [original_points[i] for i in ids]
-    removed_set = [original_points[i] for i in removed_ids]
+    reduced_set = cur.tolist()
+    removed_set = X[removed_ids].tolist() if removed_ids else []
     return reduced_set, removed_set
